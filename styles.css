@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.cv__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "heading"
+    "content"
+    "sidebar"
+    "sidebarcontact";
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .cv__wrapper {
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "heading heading sidebarcontact"
+      "content content sidebar";
+  }
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 18.72px 0 0 0;
+  line-height: 55px;
+}
+
+h2 {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0 0 3px 0;
+}
+
+p{
+    font-size: 16px;
+}
+
+.cv__heading {
+  grid-area: heading;
+}
+
+.cv__main {
+  grid-area: content;
+}
+
+.cv__sidebarcontact {
+  grid-area: sidebarcontact;
+}
+
+.cv__sidebar {
+  grid-area: sidebar;
+}
+
+.cv__box {
+  padding: 0 15px;
+}
+
+.cv__sidebarcontact p {
+  margin: 0;
+}
+
+.cv__experience h4,
+.cv__experience h5 {
+  margin: 0 0 3px 0;
+}
+
+.cv__experience p {
+  margin-top: 0;
+}
+
+.cv__experience li {
+  list-style: square;
+}
+
+.cv__experience ul {
+  padding-left: 35px;
+}
