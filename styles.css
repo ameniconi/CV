@@ -8,6 +8,7 @@
 ========================================= */
 html {
   font-family: "Poppins", sans-serif;
+  font-size: 16px; /* base size */
   scroll-behavior: smooth;
 }
 
@@ -27,93 +28,92 @@ body {
    TYPOGRAPHY
 ========================================= */
 h1 {
-  font-size: 48px;
-  line-height: 55px;
+  font-size: 3rem; /* 48px */
+  line-height: 3.4375rem; /* 55px */
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* 28px */
   font-weight: 500;
   margin: 1.5rem 0 1rem;
   color: #444;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   margin-bottom: 1.25rem;
-  max-width: 640px;
+  max-width: 40rem; /* 640px */
 }
 
 ul {
   margin: 1rem 0 1.5rem;
-  padding-left: 1.25rem;
+  padding-left: 1.25rem; /* 20px */
 }
 
 li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.375rem; /* 6px */
 }
 
 /* =========================================
    SPLIT SCREEN HOMEPAGE
 ========================================= */
-/* Ensure .split container uses full viewport height */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh; /* full viewport height */
 }
 
-/* Make LEFT column static, top-aligned */
+/* LEFT COLUMN: static, top-aligned */
 .split > .left {
   background: #ffffff;
-  padding: 2rem;
+  padding: 2rem 2rem; /* top/bottom and left/right */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* top-aligned */
-  overflow: hidden; /* no scroll */
+  overflow: hidden;
 }
 
-/* Make RIGHT column scrollable */
+/* RIGHT COLUMN: scrollable */
 .split > .right {
   background: #111;
-  color: #fff;
-  padding: 2rem;
-  height: 100vh;         /* match viewport */
-  overflow-y: auto;      /* enable vertical scroll */
+  color: #ffffff;
+  padding: 2rem 2rem; /* top/bottom and left/right */
+  height: 100vh; /* match viewport */
+  overflow-y: auto; /* vertical scroll */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* top-aligned */
+  justify-content: flex-start;
 }
 
-.split .right h2 {
+.split > .right h2 {
   color: #ffffff;
 }
 
-/* CTA buttons */
+/* CTA BUTTONS */
 .cta {
   margin-top: 2rem;
 }
 
 .cta a {
   display: inline-block;
-  padding: 0.85rem 1.6rem;
+  padding: 0.85rem 1.6rem; /* 13.6px 25.6px */
   background: #ffffff;
   color: #111;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 0.25rem; /* 4px */
   margin-right: 1rem;
 }
 
 .cta a.secondary {
   background: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 0.125rem solid #ffffff; /* 2px */
 }
 
 .cta p {
-  font-size: 0.9rem;
+  font-size: 0.5625rem; /* 9px */
   margin-top: 1rem;
   color: #ddd;
 }
@@ -129,13 +129,14 @@ li {
     "content"
     "sidebar"
     "sidebarcontact";
-  max-width: 1280px;
+  max-width: 80rem; /* 1280px */
   margin: 0 auto;
-  gap: 20px;
-  padding: 0 15px;
+  gap: 1.25rem; /* 20px */
+  padding: 2rem 2rem; /* top/bottom and left/right - matches homepage */
+   background: #ffffff;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) { /* 768px */
   .cv__wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -162,7 +163,7 @@ li {
 }
 
 .cv__box {
-  padding: 0 15px;
+  padding: 0 0.9375rem; /* 15px left/right padding */
 }
 
 .cv__sidebarcontact p {
@@ -172,7 +173,7 @@ li {
 /* EXPERIENCE LIST STYLING */
 .cv__experience h4,
 .cv__experience h5 {
-  margin: 0 0 3px 0;
+  margin: 0 0 0.1875rem 0; /* 3px */
 }
 
 .cv__experience p {
@@ -180,14 +181,14 @@ li {
 }
 
 .cv__experience ul {
-  padding-left: 35px;
+  padding-left: 2.1875rem; /* 35px */
 }
 
 .cv__experience li {
   list-style: square;
 }
 
-/* RESET SOME LIST STYLES FOR GENERAL */
+/* RESET GENERAL LIST STYLES */
 ul {
   list-style: disc outside;
 }
@@ -195,10 +196,10 @@ ul {
 /* =========================================
    RESPONSIVE
 ========================================= */
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) { /* 900px */
   .split {
     grid-template-columns: 1fr;
-    height: auto; /* collapse height for mobile */
+    height: auto;
   }
 
   .split > .right,
@@ -209,17 +210,17 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px */
   h1 {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.625rem; /* 42px */
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* 24px */
   }
 
   .cv__wrapper {
-    padding: 0 10px;
+    padding: 2rem 1rem; /* top/bottom same as homepage, smaller sides */
   }
 }
