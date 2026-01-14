@@ -1,101 +1,108 @@
+/* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* GLOBAL STYLES */
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
 
-    body {
-      line-height: 1.6;
-      color: #1a1a1a;
-      background: #f9f9f9;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 100vh;
-    }
+body {
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #f9f9f9;
+}
 
-    section {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+/* TYPOGRAPHY */
+h1 {
+  font-size: 48px;
+  line-height: 55px;
+  margin-bottom: 1rem;
+}
 
-    .left {
-      background: #ffffff;
-    }
+h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 1.5rem 0 1rem;
+  color: #444;
+}
 
-    .right {
-      background: #111;
-      color: #ffffff;
-    }
+p {
+  font-size: 16px;
+  margin-bottom: 1.25rem;
+  max-width: 640px;
+}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+ul {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.25rem;
+}
 
-    h2 {
-      font-size: 1.75rem;
-      margin: 2rem 0 1rem;
-      font-weight: 500;
-    }
+li {
+  margin-bottom: 0.6rem;
+}
 
-    .left h2 {
-      color: #444;
-    }
+/* SPLIT SCREEN HOMEPAGE */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
 
-    p {
-      margin-bottom: 1.25rem;
-      max-width: 640px;
-    }
+.split section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    ul {
-      margin: 1rem 0 1.5rem;
-      padding-left: 1.25rem;
-    }
+.left {
+  background: #ffffff;
+}
 
-    li {
-      margin-bottom: 0.6rem;
-    }
+.right {
+  background: #111;
+  color: #ffffff;
+}
 
-    .cta {
-      margin-top: 2rem;
-    }
+.right h2 {
+  color: #ffffff;
+}
 
-    .cta a {
-      display: inline-block;
-      padding: 0.85rem 1.6rem;
-      background: #ffffff;
-      color: #111;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-      margin-right: 1rem;
-    }
+.cta {
+  margin-top: 2rem;
+}
 
-    .cta a.secondary {
-      background: transparent;
-      color: #ffffff;
-      border: 2px solid #ffffff;
-    }
+.cta a {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  background: #ffffff;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
 
-    .cta p {
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      color: #ddd;
-    }
+.cta a.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
 
-    @media (max-width: 768px) {
-      .split {
-        grid-template-columns: 1fr;
-      }
-    }
+.cta p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
 
+/* CV PAGE GRID */
 .cv__wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -106,43 +113,17 @@
     "sidebarcontact";
   max-width: 1280px;
   margin: 0 auto;
+  gap: 20px;
+  padding: 0 15px;
 }
 
 @media only screen and (min-width: 768px) {
   .cv__wrapper {
-    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "heading heading sidebarcontact"
       "content content sidebar";
   }
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-}
-
-h1 {
-  font-size: 48px;
-  margin: 18.72px 0 0 0;
-  line-height: 55px;
-}
-
-h2 {
-  margin: 0;
-}
-
-ul {
-  padding-left: 0;
-}
-
-li {
-  list-style: none;
-  padding: 0 0 3px 0;
-}
-
-p{
-    font-size: 16px;
 }
 
 .cv__heading {
@@ -169,6 +150,7 @@ p{
   margin: 0;
 }
 
+/* EXPERIENCE LIST STYLING */
 .cv__experience h4,
 .cv__experience h5 {
   margin: 0 0 3px 0;
@@ -178,10 +160,37 @@ p{
   margin-top: 0;
 }
 
+.cv__experience ul {
+  padding-left: 35px;
+}
+
 .cv__experience li {
   list-style: square;
 }
 
-.cv__experience ul {
-  padding-left: 35px;
+/* RESET SOME LIST STYLES */
+ul {
+  list-style: disc outside;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .cv__wrapper {
+    padding: 0 10px;
+  }
 }
