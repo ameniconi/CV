@@ -57,28 +57,33 @@ li {
 /* =========================================
    SPLIT SCREEN HOMEPAGE
 ========================================= */
+/* Ensure .split container uses full viewport height */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  height: 100vh; /* full viewport height */
 }
 
-/* LEFT COLUMN: static and top-aligned */
-.split .left {
+/* Make LEFT column static, top-aligned */
+.split > .left {
   background: #ffffff;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* top-aligned */
+  overflow: hidden; /* no scroll */
 }
 
-/* RIGHT COLUMN: scrollable on desktop */
-.split .right {
+/* Make RIGHT column scrollable */
+.split > .right {
   background: #111;
-  color: #ffffff;
+  color: #fff;
   padding: 2rem;
-  overflow-y: auto;
-  height: 100vh;
+  height: 100vh;         /* match viewport */
+  overflow-y: auto;      /* enable vertical scroll */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* top-aligned */
 }
 
 .split .right h2 {
@@ -193,10 +198,11 @@ ul {
 @media (max-width: 900px) {
   .split {
     grid-template-columns: 1fr;
+    height: auto; /* collapse height for mobile */
   }
 
-  .split .right,
-  .split .left {
+  .split > .right,
+  .split > .left {
     height: auto;
     overflow: visible;
     justify-content: flex-start;
