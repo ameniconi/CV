@@ -1,7 +1,11 @@
-/* Google Font */
+/* =========================================
+   GOOGLE FONT
+========================================= */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-/* GLOBAL STYLES */
+/* =========================================
+   GLOBAL STYLES
+========================================= */
 html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -19,7 +23,9 @@ body {
   background: #f9f9f9;
 }
 
-/* TYPOGRAPHY */
+/* =========================================
+   TYPOGRAPHY
+========================================= */
 h1 {
   font-size: 48px;
   line-height: 55px;
@@ -48,33 +54,38 @@ li {
   margin-bottom: 0.6rem;
 }
 
-/* SPLIT SCREEN HOMEPAGE */
+/* =========================================
+   SPLIT SCREEN HOMEPAGE
+========================================= */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
 }
 
-.split section {
+/* LEFT COLUMN: static and top-aligned */
+.split .left {
+  background: #ffffff;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* top-aligned */
 }
 
-.left {
-  background: #ffffff;
-}
-
-.right {
+/* RIGHT COLUMN: scrollable on desktop */
+.split .right {
   background: #111;
   color: #ffffff;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100vh;
 }
 
-.right h2 {
+.split .right h2 {
   color: #ffffff;
 }
 
+/* CTA buttons */
 .cta {
   margin-top: 2rem;
 }
@@ -102,7 +113,9 @@ li {
   color: #ddd;
 }
 
-/* CV PAGE GRID */
+/* =========================================
+   CV PAGE GRID
+========================================= */
 .cv__wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -126,6 +139,7 @@ li {
   }
 }
 
+/* CV PAGE AREAS */
 .cv__heading {
   grid-area: heading;
 }
@@ -168,15 +182,24 @@ li {
   list-style: square;
 }
 
-/* RESET SOME LIST STYLES */
+/* RESET SOME LIST STYLES FOR GENERAL */
 ul {
   list-style: disc outside;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE
+========================================= */
 @media (max-width: 900px) {
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .split .right,
+  .split .left {
+    height: auto;
+    overflow: visible;
+    justify-content: flex-start;
   }
 }
 
