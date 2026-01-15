@@ -139,6 +139,7 @@ a.contact-button {
   font-weight: 600;
   border-radius: 0.25rem;
   margin-right: 1rem;
+	border: 0.125rem solid var(--accent);
 }
 
 .cta a.secondary {
@@ -151,6 +152,7 @@ a.contact-button {
 a.contact-button:hover {
   background: var(--dark-secondary);
   color: var(--light);
+	border-color: var(--light);
 }
 
 .cta p {
