@@ -127,19 +127,18 @@ li {
 ========================================= */
 .cta {
   margin-top: 2rem;
-	border-radius: 50%;
 	font-family: "Inter", sans-serif;
 }
 
 .cta a,
 a.contact-button {
   display: inline-block;
-  padding: 0.85rem 1.6rem;
+  padding: 0.625rem 1rem;
   background: var(--accent);
   color: var(--dark-main);
   text-decoration: none;
   font-weight: 600;
-  border-radius: 0.25rem;
+  border-radius: 3.125rem;
   margin-right: 1rem;
 	border: 0.125rem solid var(--accent);
 }
