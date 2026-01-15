@@ -118,7 +118,7 @@ li {
   color: var(--accent);
 }
 
-.split > .right ul {
+.split ul {
   list-style: none !important;
 }
 
