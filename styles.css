@@ -82,7 +82,7 @@ li {
 
 /* LEFT COLUMN: static, top-aligned */
 .split > .left {
-  background: #ffffff;
+  background: #fafafa;
   padding: 2rem 3rem; /* top/bottom and left/right */
   display: flex;
   flex-direction: column;
@@ -92,8 +92,8 @@ li {
 
 /* RIGHT COLUMN: scrollable */
 .split > .right {
-  background: #111;
-  color: #ffffff;
+  background: #121212;
+  color: #fafafa;
   padding: 2rem 3rem; /* top/bottom and left/right */
   height: 100vh; /* match viewport */
   overflow-y: auto; /* vertical scroll */
@@ -103,7 +103,7 @@ li {
 }
 
 .split > .right h2 {
-  color: #ffffff;
+  color: #fafafa;
 }
 
 /* CTA BUTTONS */
@@ -114,8 +114,8 @@ li {
 .cta a {
   display: inline-block;
   padding: 0.85rem 1.6rem; /* 13.6px 25.6px */
-  background: #ffffff;
-  color: #111;
+  background: #fafafa;
+  color: #121212;
   text-decoration: none;
   font-weight: 600;
   border-radius: 0.25rem; /* 4px */
@@ -124,8 +124,8 @@ li {
 
 .cta a.secondary {
   background: transparent;
-  color: #ffffff;
-  border: 0.125rem solid #ffffff; /* 2px */
+  color: #fafafa;
+  border: 0.125rem solid #fafafa; /* 2px */
 }
 
 .cta p {
@@ -149,7 +149,7 @@ li {
   margin: 0 auto;
   gap: 1.25rem; /* 20px */
   padding: 2rem 2rem; /* top/bottom and left/right - matches homepage */
-   background: #ffffff;
+   background: #fafafa;
 }
 
 @media only screen and (min-width: 48rem) { /* 768px */
