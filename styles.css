@@ -226,11 +226,6 @@ a.contact-button:hover {
   padding-left: 2rem;
 }
 
-/* RESET GENERAL LIST STYLES */
-ul {
-  list-style: disc outside;
-}
-
 /* =========================================
    RESPONSIVE
 ========================================= */
