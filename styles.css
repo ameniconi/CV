@@ -118,6 +118,10 @@ li {
   color: var(--accent);
 }
 
+.split > .right ul {
+  list-style: none;
+}
+
 /* =========================================
    CTA BUTTONS (FIXED CONTACT BUTTON)
 ========================================= */
