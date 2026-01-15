@@ -217,11 +217,7 @@ a.contact-button:hover {
 }
 
 .cv__experience ul {
-  padding-left: 2.1875rem;
-}
-
-.cv__experience li {
-  list-style: square;
+  padding-left: 2rem;
 }
 
 /* RESET GENERAL LIST STYLES */
