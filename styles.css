@@ -112,7 +112,7 @@ li {
 }
 
 .split > .right h2 {
-  color: var(--light);
+  color: var(--accent);
 }
 
 .split > .right li::marker {
