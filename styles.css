@@ -7,11 +7,10 @@
    COLOUR VARIABLES (YOUR PALETTE)
 ========================================= */
 :root {
-  --dark-main: #9929EA;
-  --dark-secondary: #FF5FCF;
-  --accent: #FAEB92;
-  --light: #ffffff;
-   --black: #000000;
+  --dark-main: #000000;
+  --dark-secondary: #9929EA;
+  --accent: #FF5FCF;
+  --light: #FAEB92;
 }
 
 /* =========================================
