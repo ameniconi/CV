@@ -83,10 +83,10 @@ li {
 /* LEFT COLUMN: static, top-aligned */
 .split > .left {
   background: #ffffff;
-  padding: 2rem 2rem; /* top/bottom and left/right */
+  padding: 2rem 3rem; /* top/bottom and left/right */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* top-aligned */
+  justify-content: center; /* center */
   overflow: hidden;
 }
 
@@ -94,7 +94,7 @@ li {
 .split > .right {
   background: #111;
   color: #ffffff;
-  padding: 2rem 2rem; /* top/bottom and left/right */
+  padding: 2rem 3rem; /* top/bottom and left/right */
   height: 100vh; /* match viewport */
   overflow-y: auto; /* vertical scroll */
   display: flex;
