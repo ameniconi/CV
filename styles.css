@@ -38,7 +38,6 @@ html {
   font-family: "Source Serif 4", serif;
   font-size: 1rem;
   scroll-behavior: smooth;
-	overflow: hidden;
 }
 
 h1,
@@ -232,10 +231,7 @@ ul {
 /* =========================================
    RESPONSIVE
 ========================================= */
-@media (max-width: 56.25rem) {
-	html {
-		overflow: auto;
-		
+@media (max-width: 56.25rem) {	
   .split {
     grid-template-columns: 1fr;
     height: auto;
