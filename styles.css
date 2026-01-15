@@ -118,10 +118,6 @@ li {
   color: var(--accent);
 }
 
-.split > .right li::marker {
-  color: var(--accent);
-}
-
 /* =========================================
    CTA BUTTONS (FIXED CONTACT BUTTON)
 ========================================= */
