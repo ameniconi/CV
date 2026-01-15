@@ -20,7 +20,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-   font-variant-numeric: lining-nums;
+	font-variant-numeric: lining-nums;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-smooth: subpixel-antialiased;
 }
 
 body {
