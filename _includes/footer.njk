@@ -1,23 +1,31 @@
 <footer class="footer">
   <div class="footer-inner">
 
-    <nav class="footer-nav">
-      <a href="/services/">Services</a>
-      <a href="/work/">Work</a>
-      <!--<a href="/curriculum-vitae/">CV</a>-->
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
+    <!-- Footer navigation -->
+    <nav class="footer-nav" aria-label="Footer Navigation">
+      <ul>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/work/">Work</a></li>
+        <!--<li><a href="/curriculum-vitae/">CV</a></li>-->
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
     </nav>
 
+    <!-- Social links -->
     <div class="footer-social">
-      <a class="linkedin" href="https://www.linkedin.com/in/angelomeniconi/" target="_blank" rel="noopener">
+      <a class="linkedin" href="https://www.linkedin.com/in/angelomeniconi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
         LinkedIn
       </a>
-        <a class="fiverr" href="https://www.fiverr.com/s/38WV4vB" target="_blank" rel="noopener">
+      <a class="fiverr" href="https://www.fiverr.com/s/38WV4vB" target="_blank" rel="noopener noreferrer" aria-label="Fiverr Profile">
         Fiverr
       </a>
     </div>
+
   </div>
 
-  <p class="footer-small">© Angelo Meniconi</p>
+  <!-- Copyright with dynamic year -->
+  <p class="footer-small">
+    &copy; {{ "now" | date("yyyy") }} Angelo Meniconi
+  </p>
 </footer>
