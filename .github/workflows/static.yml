@@ -13,17 +13,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout source
       - uses: actions/checkout@v3
 
+      # 2. Setup Node
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
-      - run: npm install
-      - run: npx @11ty/eleventy
+      # 3. Install dependencies
+      - run: npm ci
 
-      - name: Deploy
+      # 4. Build Eleventy site
+      - name: Build Eleventy
+        run: npx eleventy --quiet
+
+      # 5. Deploy to gh-pages branch
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+          publish_branch: gh-pages
