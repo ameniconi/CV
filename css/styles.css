@@ -208,7 +208,7 @@ section {
     padding: 0.75rem 0;
   }
 
-  .nav .cta.secondary {
+  .cta.secondary {
     background: none;
     color: var(--color-heading) !important;
     font-weight: 400;
@@ -216,7 +216,7 @@ section {
     margin : 0;
   }
 
-  .nav .cta.secondary:hover {
+  .cta.secondary:hover {
     background:none;
     color: var(--color-accent) !important;
   }
