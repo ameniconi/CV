@@ -4,6 +4,6 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: { input: ".", includes: "_includes", output: "_site" },
-    pathPrefix: "/gh-repo/"  // <-- your GitHub repo name
+    pathPrefix: "/gh-pages/"  // <-- your GitHub repo name
   };
 };
