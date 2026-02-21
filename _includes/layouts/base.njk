@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBMHVRG5');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="author" content="Angelo Meniconi">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ canonical }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ og_title or title }}">
+  <meta property="og:description" content="{{ og_description or description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="https://angelomeniconi.co.uk/favicon.ico">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ og_title or title }}">
+  <meta name="twitter:description" content="{{ og_description or description }}">
+  <meta name="twitter:image" content="https://angelomeniconi.co.uk/favicon.ico">
+
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S0STDPBKR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8S0STDPBKR');
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBMHVRG5"
+      height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {% include "nav.njk" %}
+
+  <main class="content">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+</body>
+</html>
