@@ -1,22 +1,15 @@
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
+  // Passthrough copies
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
-  return {
-    dir: { input: ".", includes: "_includes", output: "_site" },
-    pathPrefix: "/gh-pages"  // <-- replace with your GitHub repo name
-  };
-};
-
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/CNAME");
-};
-
-module.exports = function (eleventyConfig) {
   return {
     dir: {
-      input: "src",
+      input: ".",
+      includes: "_includes",
       output: "_site"
-    }
+    },
+    pathPrefix: "/gh-pages" // ← your repo name
   };
 };
