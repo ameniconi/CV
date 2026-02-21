@@ -98,21 +98,33 @@
 
   <!-- Contact Form -->
   <form
-  action="https://formspree.io/f/{FORM_ID}"
-  class="fs-form"
-  target="_top"
-  method="POST"
->
-  <div class="fs-field">
-    <label class="fs-label" for="name">Name</label>
-    <input class="fs-input" id="name" name="name" />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
+    action="https://formspree.io/f/xvzbwgvy"
+    method="POST"
+    class="contact-form"
+  >
+    <label>
+      Your Name:
+      <input type="text" name="name" placeholder="Your Name" required>
+    </label>
+
+    <label>
+      Your Email:
+      <input type="email" name="email" placeholder="you@example.com" required>
+    </label>
+
+    <label>
+      Your Message:
+      <textarea name="message" placeholder="What can I help you with?" required></textarea>
+    </label>
+
+    <button type="submit" class="cta">Send Message</button>
+  </form>
+
+  <p style="margin-top:2rem;">
+    Alternatively, you can <a href="mailto:angelo.meniconi@gmail.com">email me directly</a> 
+    or <a href="https://cal.eu/angelomeniconi/20min" target="_blank">book a time on my calendar</a>.
+  </p>
+</section>    <label class="fs-label" for="message">Message</label>
     <textarea class="fs-textarea" id="message" name="message"></textarea>
     <p class="fs-description">We usually respond within 1-2 business days.</p>
   </div>
