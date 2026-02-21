@@ -1,0 +1,10 @@
+# 11ty output
+_site/
+
+# Node dependencies
+node_modules/
+
+# OS & editor stuff (optional but recommended)
+.DS_Store
+.vscode/
+*.log
