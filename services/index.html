@@ -52,8 +52,6 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <!-- CookieConsent CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
@@ -158,45 +156,5 @@
     nav.classList.toggle('active');
   });
 </script>
-
-  <!-- CookieConsent JS -->
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { background: "#000" },
-      button: { background: "#f1d600" }
-    },
-    theme: "classic",
-    type: "opt-in",
-    content: {
-      message: "This site uses cookies for analytics and performance.",
-      dismiss: "Accept",
-      deny: "Reject",
-      link: "Learn more",
-      href: "/cookie-policy/"
-    },
-    onInitialise: function(status) {
-      setGTMConsent(status);
-    },
-    onStatusChange: function(status) {
-      setGTMConsent(status);
-    }
-  });
-});
-
-function setGTMConsent(status) {
-  // Push consent event to dataLayer
-  if (window.dataLayer) {
-    if (status === 'allow') {
-      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'granted' });
-    } else {
-      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'denied' });
-    }
-  }
-}
-</script>
-
 </body>
 </html>
