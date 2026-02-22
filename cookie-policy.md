@@ -1,5 +1,5 @@
 ---
-title: Cookie Policy
+title: "Cookie Policy"
 layout: base.njk
 permalink: /cookie-policy/
 ---
@@ -14,10 +14,10 @@ Cookies are small text files stored on your device when you visit a website. The
 
 ## Cookies we use
 
-| Cookie Name | Purpose | Type | Provider |
-|-------------|---------|------|----------|
-| _ga, _gid, _gat | Tracks site usage and events | Analytics / Non-essential | Google |
-| Other first-party cookies | Remember site preferences | Functional / Essential | angelomeniconi.co.uk |
+- ``_ga``, ``_gid``, ``_gat`` – Tracks site usage and events (Analytics / Non-essential, provided by Google)  
+- ``Other first-party cookies`` – Remember site preferences (Functional / Essential, provided by angelomeniconi.co.uk)  
+
+> Note: If you add more third-party services via Google Tag Manager, their cookies may also be set, but only after you consent.
 
 ## Why we use cookies
 
