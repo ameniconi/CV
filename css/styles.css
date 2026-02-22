@@ -399,7 +399,7 @@ section.service-card {
 }
 
 .brands-grid li {
-  background: var(--color-bg-main);
+  background: #fff;
   border: 1px solid var(--color-border);
   padding: 0.5rem;
   border-radius: 6px;
