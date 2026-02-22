@@ -87,8 +87,14 @@
 window.addEventListener("load", function(){
   window.cookieconsent.initialise({
     palette: {
-      popup: { background: "#000" },
-      button: { background: "#f1d600" }
+      popup: { 
+        background: "#ffffff",  // white background
+        text: "#000000"         // black text
+      },
+      button: { 
+        background: "#1e3a8a",  // your primary button color
+        text: "#ffffff"          // white text
+      }
     },
     theme: "classic",
     type: "opt-in",
