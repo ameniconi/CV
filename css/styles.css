@@ -48,7 +48,7 @@ h1, h2, h3 {
 .content {
   max-width: 1000px;
   margin: auto;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 section {
@@ -60,7 +60,7 @@ section {
    ========================= */
 .hero {
   text-align: center;
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .hero h1 {
@@ -361,6 +361,10 @@ section {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+section.service-card {
+   margin-bottom: 1rem;
+}
+
 .service-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -425,7 +429,7 @@ section {
    ========================= */
 
 .testimonials-home {
-  padding: 3rem 1.5rem;
+  padding: 2rem 0;
 }
 
 .testimonials-home h2 {
@@ -439,6 +443,7 @@ section {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+   padding: 0 1.5rem;
 }
 
 .testimonial {
