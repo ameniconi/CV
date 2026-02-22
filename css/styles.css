@@ -425,22 +425,17 @@ section {
    ========================= */
 
 .testimonials-home {
-  background: var(--color-bg-footer);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
   padding: 3rem 1.5rem;
 }
 
 .testimonials-home h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
 .testimonials-carousel {
-  max-width: 900px;
-  margin: 0 auto;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -453,11 +448,13 @@ section {
   padding: 2rem;
   border: 1px solid var(--color-border);
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .testimonial p {
   font-size: 1.05rem;
   line-height: 1.6;
+  font-style: italic;
   color: var(--color-text);
   margin-bottom: 1.25rem;
 }
@@ -471,6 +468,13 @@ section {
   display: block;
   color: var(--color-heading);
   font-weight: 600;
+}
+
+/* Desktop refinement */
+@media (min-width: 768px) {
+  .testimonials-carousel {
+    max-width: 900px;
+  }
 }
 
 /* Subtle scrollbar styling */
