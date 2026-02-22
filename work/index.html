@@ -208,10 +208,11 @@ window.addEventListener("load", function(){
     type: "opt-in",
     content: {
       message: "This site uses cookies for analytics and performance.",
-      dismiss: "Accept",
-      deny: "Reject",
-      link: "Learn more",
-      href: "/cookie-policy/"
+      dismiss: "Got it!",
+      deny: "No thanks",
+      link: "More Info",
+      href: "/cookie-policy/",
+      target: "_self"
     },
     onInitialise: function(status) {
       setGTMConsent(status);
