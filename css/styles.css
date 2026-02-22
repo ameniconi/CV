@@ -421,6 +421,69 @@ section {
 }
 
 /* =========================
+   TESTIMONIALS
+   ========================= */
+
+.testimonials-home {
+  background: var(--color-bg-footer);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 3rem 1.5rem;
+}
+
+.testimonials-home h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonials-carousel {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.testimonial p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+.testimonial footer {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.testimonial footer strong {
+  display: block;
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+/* Subtle scrollbar styling */
+.testimonials-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.testimonials-carousel::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+/* =========================
    RESPONSIVE CONTACT FORM
    ========================= */
 @media (max-width: 768px) {
