@@ -126,6 +126,28 @@ function setGTMConsent(status) {
   }
 }
 </script>
+<script>
+  (function () {
+    const palettes = [
+      { accent: '#1e3a8a', hover: '#162c6b' }, // Deep blue
+      { accent: '#0f766e', hover: '#115e59' }, // Teal
+      { accent: '#7c2d12', hover: '#9a3412' }, // Copper
+      { accent: '#334155', hover: '#1e293b' }  // Neutral ink
+    ];
 
+    let index = localStorage.getItem('accentPalette');
+
+    if (index === null || !palettes[index]) {
+      index = Math.floor(Math.random() * palettes.length);
+      localStorage.setItem('accentPalette', index);
+    }
+
+    const choice = palettes[index];
+    const root = document.documentElement;
+
+    root.style.setProperty('--color-accent', choice.accent);
+    root.style.setProperty('--color-accent-hover', choice.hover);
+  })();
+</script>
 </body>
 </html>
