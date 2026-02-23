@@ -191,6 +191,13 @@
   <!-- CookieConsent JS -->
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script>
+function getCSSVar(name) {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+}
+</script>
+<script>
 window.addEventListener("load", function(){
   window.cookieconsent.initialise({
     palette: {
@@ -199,7 +206,7 @@ window.addEventListener("load", function(){
         text: "#000000"         // black text
       },
       button: { 
-        background: "#1e3a8a",  // your primary button color
+        background: getCSSVar('--color-accent'),
         text: "#ffffff"          // white text
       }
     },
