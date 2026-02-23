@@ -69,7 +69,6 @@ section {
 
 .hero h1 {
   font-size: 2.5rem;
-   color: var(--color-accent-hover);
 }
 
 .hero p {
@@ -94,7 +93,7 @@ section {
   background: var(--color-accent);
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.2s ease;
