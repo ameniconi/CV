@@ -231,52 +231,48 @@ f.parentNode.insertBefore(j,f);
   <!-- CookieConsent -->
   <!-- ========================= -->
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-  <script>
-    window.addEventListener("load", function(){
-      window.cookieconsent.initialise({
-        palette: {
-          popup: {
-            background: "#ffffff",
-            text: "#000000"
-          },
-          button: {
-            background: getComputedStyle(document.documentElement)
-              .getPropertyValue('--color-accent').trim(),
-            text: "#ffffff"
-          }
-        },
-        theme: "classic",
-        type: "opt-in",
-        content: {
-          message: "This site uses cookies for analytics and performance.",
-          allow: "Got it!",
-          deny: "No thanks",
-          link: "More info",
-          href: "/cookie-policy/"
-        },
-        onInitialise: function(status) {
-          updateConsent(status);
-        },
-        onStatusChange: function(status) {
-          updateConsent(status);
-        }
-      });
-    });
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function () {
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: "#ffffff",
+        text: "#000000"
+      },
+      button: {
+        background: getComputedStyle(document.documentElement)
+          .getPropertyValue('--color-accent')
+          .trim(),
+        text: "#ffffff"
+      }
+    },
+    theme: "classic",
+    type: "opt-in",
+    content: {
+      message: "This site uses cookies for analytics and performance.",
+      allow: "Got it!",
+      deny: "No thanks",
+      link: "More info",
+      href: "/cookie-policy/"
+    },
+    onInitialise: function (status) {
+      setGTMConsent(status);
+    },
+    onStatusChange: function (status) {
+      setGTMConsent(status);
+    }
+  });
+});
 
 function setGTMConsent(status) {
   if (!window.gtag) return;
 
-  if (status === 'allow') {
-    gtag('consent', 'update', {
-      analytics_storage: 'granted'
-    });
-  } else {
-    gtag('consent', 'update', {
-      analytics_storage: 'denied'
-    });
-  }
+  gtag('consent', 'update', {
+    analytics_storage: status === 'allow' ? 'granted' : 'denied'
+  });
 }
-  </script>
+</script>
 
 </body>
 </html>
