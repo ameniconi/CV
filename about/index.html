@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- ========================= -->
-  <!-- Consent Mode (DEFAULT) -->
-  <!-- ========================= -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied'
-  });
-</script>
-
-  <!-- ========================= -->
   <!-- Google Tag Manager -->
-  <!-- ========================= -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];
-w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MBMHVRG5');
-</script>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBMHVRG5');
+  </script>
   <!-- End Google Tag Manager -->
 
   <meta charset="utf-8">
@@ -45,7 +28,7 @@ f.parentNode.insertBefore(j,f);
   <!-- Open Graph -->
   <meta property="og:title" content="About Angelo Meniconi – Freelance Web Designer, Consultant &amp; Front-End Developer">
   <meta property="og:description" content="Angelo Meniconi is a freelance web designer, consultant, and front-end developer with 10+ years experience building websites and digital solutions for businesses and startups worldwide.">
-  <meta property="og:type" content="website">
+  <meta propert1e" content="website">
   <meta property="og:url" content="https://angelomeniconi.co.uk/about/">
   <meta property="og:image" content="https://angelomeniconi.co.uk/favicon.ico">
 
@@ -55,24 +38,32 @@ f.parentNode.insertBefore(j,f);
   <meta name="twitter:description" content="Angelo Meniconi is a freelance web designer, consultant, and front-end developer with 10+ years experience building websites and digital solutions for businesses and startups worldwide.">
   <meta name="twitter:image" content="https://angelomeniconi.co.uk/favicon.ico">
 
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" href="/favicon.ico">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S0STDPBKR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8S0STDPBKR');
+  </script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
   <!-- CookieConsent CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
 </head>
 
 <body>
-
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBMHVRG5"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
   </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <header class="site-header">
   <div class="header-inner">
@@ -170,63 +161,35 @@ f.parentNode.insertBefore(j,f);
   <p class="footer-small">© 2026 Angelo Meniconi</p>
 </footer>
 
-
-  <!-- Mobile nav -->
   <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    }
-  </script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
 
-  <!-- ========================= -->
-  <!-- Accent palette -->
-  <!-- ========================= -->
-  <script>
-    (function () {
-      const palettes = [
-        { accent: '#1e3a8a', hover: '#162c6b' },
-        { accent: '#0f766e', hover: '#115e59' },
-        { accent: '#7c2d12', hover: '#9a3412' },
-        { accent: '#334155', hover: '#1e293b' }
-      ];
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
 
-      let index = localStorage.getItem('accentPalette');
-
-      if (index === null || !palettes[index]) {
-        index = Math.floor(Math.random() * palettes.length);
-        localStorage.setItem('accentPalette', index);
-      }
-
-      const choice = palettes[index];
-      const root = document.documentElement;
-
-      root.style.setProperty('--color-accent', choice.accent);
-      root.style.setProperty('--color-accent-hover', choice.hover);
-    })();
-  </script>
-
-  <!-- ========================= -->
-  <!-- CookieConsent -->
-  <!-- ========================= -->
-  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <!-- CookieConsent JS -->
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script>
-window.addEventListener("load", function () {
+function getCSSVar(name) {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+}
+</script>
+<script>
+window.addEventListener("load", function(){
   window.cookieconsent.initialise({
     palette: {
-      popup: {
-        background: "#ffffff",
-        text: "#000000"
+      popup: { 
+        background: "#ffffff",  // white background
+        text: "#000000"         // black text
       },
-      button: {
-        background: getComputedStyle(document.documentElement)
-          .getPropertyValue('--color-accent')
-          .trim(),
-        text: "#ffffff"
+      button: { 
+        background: getCSSVar('--color-accent'),
+        text: "#ffffff"          // white text
       }
     },
     theme: "classic",
@@ -235,26 +198,52 @@ window.addEventListener("load", function () {
       message: "This site uses cookies for analytics and performance.",
       allow: "Got it!",
       deny: "No thanks",
-      link: "More info",
-      href: "/cookie-policy/"
+      link: "More Info",
+      href: "/cookie-policy/",
+      target: "_self"
     },
-    onInitialise: function (status) {
+    onInitialise: function(status) {
       setGTMConsent(status);
     },
-    onStatusChange: function (status) {
+    onStatusChange: function(status) {
       setGTMConsent(status);
     }
   });
 });
 
 function setGTMConsent(status) {
-  if (!window.gtag) return;
-
-  gtag('consent', 'update', {
-    analytics_storage: status === 'allow' ? 'granted' : 'denied'
-  });
+  // Push consent event to dataLayer
+  if (window.dataLayer) {
+    if (status === 'allow') {
+      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'granted' });
+    } else {
+      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'denied' });
+    }
+  }
 }
 </script>
+<script>
+  (function () {
+    const palettes = [
+      { accent: '#1e3a8a', hover: '#162c6b' }, // Deep blue
+      { accent: '#0f766e', hover: '#115e59' }, // Teal
+      { accent: '#7c2d12', hover: '#9a3412' }, // Copper
+      { accent: '#334155', hover: '#1e293b' }  // Neutral ink
+    ];
 
+    let index = localStorage.getItem('accentPalette');
+
+    if (index === null || !palettes[index]) {
+      index = Math.floor(Math.random() * palettes.length);
+      localStorage.setItem('accentPalette', index);
+    }
+
+    const choice = palettes[index];
+    const root = document.documentElement;
+
+    root.style.setProperty('--color-accent', choice.accent);
+    root.style.setProperty('--color-accent-hover', choice.hover);
+  })();
+</script>
 </body>
 </html>
