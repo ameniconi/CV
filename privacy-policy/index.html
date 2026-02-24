@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- ========================= -->
+  <!-- Consent Mode (DEFAULT) -->
+  <!-- ========================= -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+</script>
+
+  <!-- ========================= -->
   <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MBMHVRG5');
-  </script>
+  <!-- ========================= -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];
+w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MBMHVRG5');
+</script>
   <!-- End Google Tag Manager -->
 
   <meta charset="utf-8">
@@ -28,7 +45,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Privacy Policy | Angelo Meniconi">
   <meta property="og:description" content="Understand how Angelo Meniconi collects and handles personal data through the website, including contact form submissions and analytics.">
-  <meta propert1e" content="website">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://angelomeniconi.co.uk/privacy-policy/">
   <meta property="og:image" content="https://angelomeniconi.co.uk/favicon.ico">
 
@@ -38,32 +55,24 @@
   <meta name="twitter:description" content="Understand how Angelo Meniconi collects and handles personal data through the website, including contact form submissions and analytics.">
   <meta name="twitter:image" content="https://angelomeniconi.co.uk/favicon.ico">
 
-<link rel="stylesheet" href="/css/styles.css">
-<link rel="icon" href="/favicon.ico">
-
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S0STDPBKR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8S0STDPBKR');
-  </script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/favicon.ico">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- CookieConsent CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
 </head>
 
 <body>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBMHVRG5"
-      height="0" width="0" style="display:none;visibility:hidden">
-    </iframe>
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header class="site-header">
   <div class="header-inner">
@@ -149,89 +158,95 @@
   <p class="footer-small">© 2026 Angelo Meniconi</p>
 </footer>
 
+
+  <!-- Mobile nav -->
   <script>
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
-
-  <!-- CookieConsent JS -->
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-function getCSSVar(name) {
-  return getComputedStyle(document.documentElement)
-    .getPropertyValue(name)
-    .trim();
-}
-</script>
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { 
-        background: "#ffffff",  // white background
-        text: "#000000"         // black text
-      },
-      button: { 
-        background: getCSSVar('--color-accent'),
-        text: "#ffffff"          // white text
-      }
-    },
-    theme: "classic",
-    type: "opt-in",
-    content: {
-      message: "This site uses cookies for analytics and performance.",
-      allow: "Got it!",
-      deny: "No thanks",
-      link: "More Info",
-      href: "/cookie-policy/",
-      target: "_self"
-    },
-    onInitialise: function(status) {
-      setGTMConsent(status);
-    },
-    onStatusChange: function(status) {
-      setGTMConsent(status);
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
     }
-  });
-});
+  </script>
+
+  <!-- ========================= -->
+  <!-- Accent palette -->
+  <!-- ========================= -->
+  <script>
+    (function () {
+      const palettes = [
+        { accent: '#1e3a8a', hover: '#162c6b' },
+        { accent: '#0f766e', hover: '#115e59' },
+        { accent: '#7c2d12', hover: '#9a3412' },
+        { accent: '#334155', hover: '#1e293b' }
+      ];
+
+      let index = localStorage.getItem('accentPalette');
+
+      if (index === null || !palettes[index]) {
+        index = Math.floor(Math.random() * palettes.length);
+        localStorage.setItem('accentPalette', index);
+      }
+
+      const choice = palettes[index];
+      const root = document.documentElement;
+
+      root.style.setProperty('--color-accent', choice.accent);
+      root.style.setProperty('--color-accent-hover', choice.hover);
+    })();
+  </script>
+
+  <!-- ========================= -->
+  <!-- CookieConsent -->
+  <!-- ========================= -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        palette: {
+          popup: {
+            background: "#ffffff",
+            text: "#000000"
+          },
+          button: {
+            background: getComputedStyle(document.documentElement)
+              .getPropertyValue('--color-accent').trim(),
+            text: "#ffffff"
+          }
+        },
+        theme: "classic",
+        type: "opt-in",
+        content: {
+          message: "This site uses cookies for analytics and performance.",
+          allow: "Got it!",
+          deny: "No thanks",
+          link: "More info",
+          href: "/cookie-policy/"
+        },
+        onInitialise: function(status) {
+          updateConsent(status);
+        },
+        onStatusChange: function(status) {
+          updateConsent(status);
+        }
+      });
+    });
 
 function setGTMConsent(status) {
-  // Push consent event to dataLayer
-  if (window.dataLayer) {
-    if (status === 'allow') {
-      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'granted' });
-    } else {
-      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'denied' });
-    }
+  if (!window.gtag) return;
+
+  if (status === 'allow') {
+    gtag('consent', 'update', {
+      analytics_storage: 'granted'
+    });
+  } else {
+    gtag('consent', 'update', {
+      analytics_storage: 'denied'
+    });
   }
 }
-</script>
-<script>
-  (function () {
-    const palettes = [
-      { accent: '#1e3a8a', hover: '#162c6b' }, // Deep blue
-      { accent: '#0f766e', hover: '#115e59' }, // Teal
-      { accent: '#7c2d12', hover: '#9a3412' }, // Copper
-      { accent: '#334155', hover: '#1e293b' }  // Neutral ink
-    ];
+  </script>
 
-    let index = localStorage.getItem('accentPalette');
-
-    if (index === null || !palettes[index]) {
-      index = Math.floor(Math.random() * palettes.length);
-      localStorage.setItem('accentPalette', index);
-    }
-
-    const choice = palettes[index];
-    const root = document.documentElement;
-
-    root.style.setProperty('--color-accent', choice.accent);
-    root.style.setProperty('--color-accent-hover', choice.hover);
-  })();
-</script>
 </body>
 </html>
