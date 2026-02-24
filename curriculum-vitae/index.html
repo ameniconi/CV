@@ -253,59 +253,6 @@
     nav.classList.toggle('active');
   });
 </script>
-
-  <!-- CookieConsent JS -->
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-function getCSSVar(name) {
-  return getComputedStyle(document.documentElement)
-    .getPropertyValue(name)
-    .trim();
-}
-</script>
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { 
-        background: "#ffffff",  // white background
-        text: "#000000"         // black text
-      },
-      button: { 
-        background: getCSSVar('--color-accent'),
-        text: "#ffffff"          // white text
-      }
-    },
-    theme: "classic",
-    type: "opt-in",
-    content: {
-      message: "This site uses cookies for analytics and performance.",
-      allow: "Got it!",
-      deny: "No thanks",
-      link: "More Info",
-      href: "/cookie-policy/",
-      target: "_self"
-    },
-    onInitialise: function(status) {
-      setGTMConsent(status);
-    },
-    onStatusChange: function(status) {
-      setGTMConsent(status);
-    }
-  });
-});
-
-function setGTMConsent(status) {
-  // Push consent event to dataLayer
-  if (window.dataLayer) {
-    if (status === 'allow') {
-      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'granted' });
-    } else {
-      dataLayer.push({ event: 'cookie_consent', analytics_consent: 'denied' });
-    }
-  }
-}
-</script>
 <script>
   (function () {
     const palettes = [
